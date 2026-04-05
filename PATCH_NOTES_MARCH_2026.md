@@ -4,6 +4,19 @@
 
 ---
 
+## Alpha 1.2 — Performance & consistency (April 2026)
+
+**Keine Gameplay-Logik geändert** — nur Rendering und Cache-Verhalten.
+
+| Bereich | Änderung |
+|--------|-----------|
+| **Mania** | `hit_y` und Scroll-Faktor (ppm) **einmal pro Frame pro Lane** statt pro Note; weniger redundante `hit_y_for_lane`-Aufrufe und Skin-Manager-Reads. |
+| **DEPTH** | Notenfarben pro Lane **`note_color_rgb_for_lane` einmal pro Frame** für alle vier Lanes cachen statt pro Note. |
+| **Particles** | Optional **`pygame.gfxdraw.filled_circle`**, Fallback auf `pygame.draw.circle`. |
+| **Blur** | **`clear_blur_cache()`** ruft auch **`invalidate_blur_iterations_cache()`** auf — keine veralteten Blur-Iterationen aus dem TTL-Cache nach komplettem Cache-Clear. |
+
+---
+
 ## Update — April 2026 (Portable / Freunde-Build)
 
 **Start:** Im Release-Ordner **`omen.exe`** (Kopie von `RHYT.exe`) — kompletter Ordner inkl. `_internal`, Skins, leerer `assets\maps`, neutrales Profil.

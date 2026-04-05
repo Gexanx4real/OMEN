@@ -8,6 +8,15 @@
 
 Full changelog: **[PATCH_NOTES_MARCH_2026.md](PATCH_NOTES_MARCH_2026.md)**
 
+### Alpha 1.2 — Performance & consistency (April 2026)
+
+Rendering and cache behavior only; **no gameplay logic changes.**
+
+- **Mania:** `hit_y` and scroll factor (ppm) are computed **once per frame per lane** instead of per note — fewer redundant `hit_y_for_lane` calls and skin-manager reads.
+- **DEPTH:** Per-lane note colors (`note_color_rgb_for_lane`) are **cached once per frame** for all four lanes instead of per note.
+- **Particles:** Optional `pygame.gfxdraw.filled_circle` with **fallback** to `pygame.draw.circle`.
+- **Blur:** `clear_blur_cache()` also calls **`invalidate_blur_iterations_cache()`** so blur iteration counts are not served from a stale TTL cache after a full cache clear.
+
 ### Latest (friend-ready portable build)
 
 - **Butze / profile:** Reliable sync of PP, level, playtime, and accuracy — merge runs whenever logged in so local `scores.json` weighted PP no longer overwrites server values. Extra API fields (`rankedPp`, `totalRankedPp`, `globalPp`, `performance_points`) and unified extraction in `butze_client.py`. Ranking combines supplementary parser + Butze data. With Butze login, local PP/avg ACC are not recomputed from `scores.json` when inappropriate.
