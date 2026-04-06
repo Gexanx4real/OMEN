@@ -8,18 +8,6 @@
 
 Full changelog: **[PATCH_NOTES_MARCH_2026.md](PATCH_NOTES_MARCH_2026.md)**
 
-### Alpha 1.3 — Fail screen, live PP, SR cache (April 2026)
-
-Rendering and cache behavior only; **no gameplay logic changes.**
-
-- **Fail screen:** osu-style result layout is **cached per phase** (no full redraw every frame during the 800–1300 ms window).
-- **Gameplay HUD:** **Live PP** reuses **cached star rating** per map/mods; one `get_judgment_counts()` per PP compute; static **“score” / “pp”** label surfaces cached.
-- **Star rating:** `resolve_mania_stars_for_pp` uses a **module cache** for `meta.json` (path + mtime + mod signature) to cut repeated disk reads (e.g. song select).
-
-**`omen.exe` integrity (this build):**  
-- SHA-256 (hex): `a78258576015105eaeae23be4a864dd82f495cdf16ff93ed4b6c136d20274551`  
-- SHA-256 (Base64): `p4JYV2AVEF6uriO+SoZN2C9JXN8W/5PtS2wTbSAnRVE=`
-
 ### Alpha 1.2 — Performance & consistency (April 2026)
 
 Rendering and cache behavior only; **no gameplay logic changes.**

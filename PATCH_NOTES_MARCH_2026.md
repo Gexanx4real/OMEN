@@ -4,20 +4,6 @@
 
 ---
 
-## Alpha 1.3 — Fail-Screen, Live-PP, Sterne-Cache (April 2026)
-
-**Keine Gameplay-Logik geändert** — Rendering, HUD und Dateizugriffe.
-
-| Bereich | Änderung |
-|--------|-----------|
-| **Fail-Screen** | `render_osu_result_layout` wird **pro Phase** in einen Offscreen-Cache gerendert (nicht jedes Frame zwischen Panel- und Button-Phase). |
-| **Gameplay HUD** | **Live-PP:** Sterne (`resolve_mania_stars_for_pp`) **pro Map/Mods** cachen; `get_judgment_counts` nur **einmal** pro PP-Berechnung; statische Labels **„score“ / „pp“** cachen. |
-| **SR / meta.json** | **Modul-Cache** für gleiche `meta.json` (Pfad + mtime + Mod-Signatur) — weniger wiederholtes Lesen (u. a. Song-Select). |
-
-**Release:** Menü-Version **Alpha 1.3** (`config.GAME_VERSION`). **`omen.exe` SHA-256:** Hex `a78258576015105eaeae23be4a864dd82f495cdf16ff93ed4b6c136d20274551` · Base64 `p4JYV2AVEF6uriO+SoZN2C9JXN8W/5PtS2wTbSAnRVE=`
-
----
-
 ## Alpha 1.2 — Performance & consistency (April 2026)
 
 **Keine Gameplay-Logik geändert** — nur Rendering und Cache-Verhalten.
