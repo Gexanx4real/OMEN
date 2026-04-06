@@ -14,7 +14,7 @@
 | **Gameplay HUD** | **Live-PP:** Sterne (`resolve_mania_stars_for_pp`) **pro Map/Mods** cachen; `get_judgment_counts` nur **einmal** pro PP-Berechnung; statische Labels **„score“ / „pp“** cachen. |
 | **SR / meta.json** | **Modul-Cache** für gleiche `meta.json` (Pfad + mtime + Mod-Signatur) — weniger wiederholtes Lesen (u. a. Song-Select). |
 
-**Release:** Menü-Version **Alpha 1.3** (`config.GAME_VERSION`). **`omen.exe` SHA-256:** Hex `d562b6afc44ac65aa5cd5ee0b4dec2cf7ce7dc9e6a485f6044cfa6fd8bd3d4f1` · Base64 `1WK2r8RKxlqlzV7gtN7Cz3zn3J5qSF9gRM+m/YvT1PE=`
+**Release:** Menü-Version **Alpha 1.3** (`config.GAME_VERSION`). **`omen.exe` SHA-256:** Hex `a78258576015105eaeae23be4a864dd82f495cdf16ff93ed4b6c136d20274551` · Base64 `p4JYV2AVEF6uriO+SoZN2C9JXN8W/5PtS2wTbSAnRVE=`
 
 ---
 

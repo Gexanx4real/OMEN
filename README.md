@@ -17,8 +17,8 @@ Rendering and cache behavior only; **no gameplay logic changes.**
 - **Star rating:** `resolve_mania_stars_for_pp` uses a **module cache** for `meta.json` (path + mtime + mod signature) to cut repeated disk reads (e.g. song select).
 
 **`omen.exe` integrity (this build):**  
-- SHA-256 (hex): `d562b6afc44ac65aa5cd5ee0b4dec2cf7ce7dc9e6a485f6044cfa6fd8bd3d4f1`  
-- SHA-256 (Base64): `1WK2r8RKxlqlzV7gtN7Cz3zn3J5qSF9gRM+m/YvT1PE=`
+- SHA-256 (hex): `a78258576015105eaeae23be4a864dd82f495cdf16ff93ed4b6c136d20274551`  
+- SHA-256 (Base64): `p4JYV2AVEF6uriO+SoZN2C9JXN8W/5PtS2wTbSAnRVE=`
 
 ### Alpha 1.2 — Performance & consistency (April 2026)
 
