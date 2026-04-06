@@ -1,0 +1,2 @@
+# Git LFS — llvmlite.dll ist ~102 MB (ueber GitHub 100 MB Limit ohne LFS)
+**/llvmlite.dll filter=lfs diff=lfs merge=lfs -text
