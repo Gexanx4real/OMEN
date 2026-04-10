@@ -4,6 +4,30 @@
 
 ---
 
+## GitHub portable build — Receptor borders & osu!mania-style holds (April 2026)
+
+### Receptor borders
+
+Idle and pulse borders on lane receptors (circle + rectangle skins) and on the depth-mode hitzone circles now use the same **white–blue blend** as the playfield (inner/outer lane colors via `flare_dual_colors_for_lane`), instead of a fixed gray idle border or simple color scaling.
+
+**Performance:** Border color is computed with **integer tuple math only** (no extra surfaces or per-frame allocations).
+
+*Example commit subject:* `Receptor borders: match playfield white-blue blend (O(1) color math)`
+
+### Long notes (holds)
+
+Hold notes now follow **osu!mania-style** behavior:
+
+- **Releasing a hold before the tail window** is a **combo break**, not a miss — it no longer inflates `count_miss` or unfairly tank accuracy/PP.
+- **Holding past the tail** without a key-up **auto-resolves** with a lenient tail judgment (worse of head vs. “50/BREAK” tier) instead of timing out as a miss.
+- **Hold body ticks** while the key is held: periodic `add_tick()` scoring between head and tail (half-beat spacing), with proper key-held tracking (`_key_held`) so long holds still register for logic and visuals.
+
+**Score system:** Added `add_hold_combo_break()` and `_count_hold_combo_break` so the accuracy denominator matches osu!-like counting without counting LN early-release as misses.
+
+*Example one-line commit:* `fix(mania): osu!-style LN judgement (combo break on early release, tail auto-release, hold ticks)`
+
+---
+
 ## Alpha 1.2 — Performance & consistency (April 2026)
 
 **Keine Gameplay-Logik geändert** — nur Rendering und Cache-Verhalten.
