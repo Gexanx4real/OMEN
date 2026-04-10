@@ -8,6 +8,11 @@
 
 Full changelog: **[PATCH_NOTES_MARCH_2026.md](PATCH_NOTES_MARCH_2026.md)**
 
+### Alpha 1.2.1 — Receptor borders & long-note (hold) judgement
+
+- **Receptor borders:** Idle/pulse on lane receptors (circle + rectangle skins) and depth-mode hitzone circles use the same **white–blue blend** as the playfield (`flare_dual_colors_for_lane`), not fixed gray or simple scaling. Border colors use **integer tuple math only** (no extra surfaces or per-frame allocations).
+- **Long notes (osu!mania-style):** Early release before the tail window is a **combo break**, not a miss (fairer ACC/PP). Holding past the tail without key-up **auto-resolves** with a lenient tail judgement. **Hold ticks** (`add_tick`, half-beat spacing) with `_key_held` tracking. Score: `add_hold_combo_break` / `_count_hold_combo_break` for osu!-like denominators.
+
 ### Alpha 1.2 — Performance & consistency (April 2026)
 
 Rendering and cache behavior only; **no gameplay logic changes.**

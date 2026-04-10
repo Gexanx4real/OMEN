@@ -4,7 +4,7 @@
 
 ---
 
-## GitHub portable build — Receptor borders & osu!mania-style holds (April 2026)
+## Alpha 1.2.1 — Receptor borders & osu!mania-style holds (portable / GitHub, April 2026)
 
 ### Receptor borders
 
