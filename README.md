@@ -8,6 +8,12 @@
 
 Full changelog: **[PATCH_NOTES_MARCH_2026.md](PATCH_NOTES_MARCH_2026.md)**
 
+### Alpha 1.2.2 — Chat scroll & last-score card
+
+- **Chat (thread view):** Mouse wheel scrolls messages when the pointer is over the chat panel except the **text input** and **send** area; uses wheel **position** when available; maps horizontal wheel to vertical where needed; **Page Up / Page Down** for message scroll.
+- **Input:** `MOUSEWHEEL` uses **`event.x`** fallback when **`event.y`** is 0 (trackpads).
+- **Last score card:** Taller bubble body and **refined layout** to fix overflow.
+
 ### Alpha 1.2.1 — Receptor borders & long-note (hold) judgement
 
 - **Receptor borders:** Idle/pulse on lane receptors (circle + rectangle skins) and depth-mode hitzone circles use the same **white–blue blend** as the playfield (`flare_dual_colors_for_lane`), not fixed gray or simple scaling. Border colors use **integer tuple math only** (no extra surfaces or per-frame allocations).

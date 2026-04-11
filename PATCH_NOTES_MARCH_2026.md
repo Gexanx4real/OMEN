@@ -4,6 +4,26 @@
 
 ---
 
+## Alpha 1.2.2 — Omen chat scroll & last-score card (portable / GitHub, April 2026)
+
+### Chat (thread view)
+
+- **Mouse wheel** scrolls the **message list** when the cursor is anywhere on the chat panel **except** the text input and send button (no longer limited to a tight message strip).
+- Uses the wheel event’s **mouse position** when available; treats **horizontal-only** wheel deltas as **vertical** where needed.
+- **Page Up / Page Down** scroll messages.
+
+### Input
+
+- **MOUSEWHEEL** handling falls back to **`event.x`** when **`event.y`** is zero (some trackpads).
+
+### Last score card
+
+- Increased **bubble body height** and **refined layout** to reduce overflow/clipping.
+
+*Release title:* Fix Omen chat scrolling and last-score card overflow
+
+---
+
 ## Alpha 1.2.1 — Receptor borders & osu!mania-style holds (portable / GitHub, April 2026)
 
 ### Receptor borders
