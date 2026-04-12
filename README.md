@@ -11,6 +11,41 @@ Full changelog: **[PATCH_NOTES_MARCH_2026.md](PATCH_NOTES_MARCH_2026.md)**
 ### Alpha 1.3.0 — Latest portable build (1.3 line)
 
 - Fresh **omen.exe** from current source: **fixes, polish, and features** since 1.2.3. Details: **PATCH_NOTES** and dev repo history.
+Client update (Butze-hosted package)
+Overview
+The game can show an in-menu update notice when the public Butze endpoint reports a newer version than the local GAME_VERSION. Players can either download in-app (verified package) or open the release page in a browser (optional download_url).
+
+API (server-side contract)
+
+GET /panel-api/omen/update — JSON: available, version, package_url, package_sha256, file_size, optional download_url.
+Package is a portable ZIP; the server only hosts metadata and the file — merge/preserve rules are entirely client-side.
+Client behavior
+
+Banner is shown only if the remote version parses as strictly greater than the local version.
+Auto-update: stream-download from package_url to %TEMP%\omen_update\…, verify SHA-256 against package_sha256, extract, then spawn a second process of the same executable with --omen-apply-update and exit the game.
+Browser: opens download_url when present.
+Download progress uses file_size when available.
+User data preserved on merge
+The apply step merges the new build into the install folder without overwriting existing:
+
+assets/maps/ (beatmaps)
+data/settings.json
+scores.json
+replays/
+.env
+(Plus legacy echoes_settings.json where applicable.)
+
+Admin tooling (maintainers, not shipped to players)
+
+Root Update.bat launches tools/UpdateNoticeGui.ps1.
+Publish update: multipart POST with version, optional download_url, and the ZIP file (curl.exe-based upload); header x-omen-update-key.
+Disable banner: JSON POST {"available": false}.
+Technical entry point
+
+main.py / frozen omen.exe: early handler for
+--omen-apply-update <staging> <pid> [<install_root> [<cleanup_dir>]]
+(runs before pygame; performs wait-on-PID, merge, logging, optional temp cleanup.)
+
 
 ### Alpha 1.2.3 — Latest portable build
 
