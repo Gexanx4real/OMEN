@@ -10,10 +10,13 @@ Full changelog: **[PATCH_NOTES_MARCH_2026.md](PATCH_NOTES_MARCH_2026.md)**
 
 ### Alpha 1.3.0 — Latest portable build (1.3 line)
 
-Client update (Butze-hosted package)
-Overview
-The game can show an in-menu update notice when the public Butze endpoint reports a newer version than the local GAME_VERSION. Players can either download in-app (verified package) or open the release page in a browser (optional download_url).
+OMEN can tell you when a new version is available right from the main menu. If an update is offered, you can:
 
+Update automatically — the game downloads the official update package, checks that it’s complete and untampered, then applies it and restarts.
+Open in browser — if a download link is provided, you can grab the files yourself (for example from GitHub).
+Your own content stays yours. When an update is applied, the game does not replace your beatmaps, settings, scores, replays, or your local .env file. Those folders and files are left as they are.
+
+Note for maintainers: publishing updates to the announcement server uses a separate admin tool in the project repository; players only see the in-game notice and the two options above.
 ### Alpha 1.2.3 — Latest portable build
 
 - Fresh **omen.exe** from current source: **fixes and polish** since 1.2.2. See **PATCH_NOTES** and your dev repo for specifics.
