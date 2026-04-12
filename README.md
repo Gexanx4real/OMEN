@@ -8,6 +8,10 @@
 
 Full changelog: **[PATCH_NOTES_MARCH_2026.md](PATCH_NOTES_MARCH_2026.md)**
 
+### Alpha 1.3.0 — Latest portable build (1.3 line)
+
+- Fresh **omen.exe** from current source: **fixes, polish, and features** since 1.2.3. Details: **PATCH_NOTES** and dev repo history.
+
 ### Alpha 1.2.3 — Latest portable build
 
 - Fresh **omen.exe** from current source: **fixes and polish** since 1.2.2. See **PATCH_NOTES** and your dev repo for specifics.

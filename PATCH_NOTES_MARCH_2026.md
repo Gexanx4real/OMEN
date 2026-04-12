@@ -4,6 +4,12 @@
 
 ---
 
+## Alpha 1.3.0 — Portable build (April 2026)
+
+**Alpha 1.3** line: fresh **PyInstaller** portable build from current **RHYT / OMEN** source — **fixes, polish, and feature work** since Alpha 1.2.3. Per-commit history: development repository.
+
+---
+
 ## Alpha 1.2.3 — Portable build update (April 2026)
 
 Fresh **PyInstaller** portable build from the current **RHYT / OMEN** source tree: **bugfixes and polish** since Alpha 1.2.2. For per-commit detail, see the development repository history.
