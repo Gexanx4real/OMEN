@@ -1,0 +1,34 @@
+ECHOES / RHYT — Verteiler-Paket (Release)
+========================================
+
+Start
+-----
+- Doppelklick auf omen.exe (oder RHYT.exe — gleiche Datei; Arbeitsverzeichnis = dieser Ordner).
+- Erste Namenswahl und Einstellungen unter „Einstellungen“.
+
+Account-neutral
+---------------
+- Keine persönlichen Daten in diesem Ordner: scores.json ist leer; data\settings.json /
+  profile.json sind neutrale Defaults.
+- Globale Scores (butzebot.com / Omen): Beim ersten Start erscheint der Anmelde-Screen.
+  Die Session liegt außerhalb dieses Ordners unter Windows in
+  %APPDATA%\Omen\auth.json (Linux/macOS: ~/.config/omen/auth.json) — nicht im Release-Ordner.
+
+Internet / HTTPS
+----------------
+- SSL-Zertifikate (certifi) sind in der EXE eingebunden — Online-Features (Multiplayer-Registry,
+  globale Scores, API) nutzen normale HTTPS-Verbindungen.
+- Firewall: Bei Multiplayer-Host ggf. Port freigeben (siehe Spiel).
+
+Ordner
+------
+- assets\     — Maps, Grafiken (ohne analysis_cache beim Build)
+- skins\      — Hitsounds / Skins — Ordner vollständig mitgeben
+- data\       — wird beim Spielen gefüllt (Einstellungen, Profil, ggf. Warteschlange Scores)
+- replays\    — Replays
+- _internal\  — Python-Laufzeit und Bibliotheken (nicht löschen)
+
+Wichtig
+-------
+- Den kompletten Ordner Release\ weitergeben, nicht nur omen.exe
+  (sonst fehlen _internal, assets, skins).
