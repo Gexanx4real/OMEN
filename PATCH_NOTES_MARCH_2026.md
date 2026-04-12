@@ -4,6 +4,13 @@
 
 ---
 
+## Alpha 1.3.1 — Downloads: speed & fixes (April 2026)
+
+- **Faster download speed** for in-game / portable map and asset downloads.
+- **Download bug fixes** — more reliable transfers and fewer edge-case failures.
+
+---
+
 ## Alpha 1.3.0 — Portable build (April 2026)
 
 **Alpha 1.3** line: fresh **PyInstaller** portable build from current **RHYT / OMEN** source — **fixes, polish, and feature work** since Alpha 1.2.3. Per-commit history: development repository.
