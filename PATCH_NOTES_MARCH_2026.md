@@ -4,6 +4,12 @@
 
 ---
 
+## Alpha 1.2.3 — Portable build update (April 2026)
+
+Fresh **PyInstaller** portable build from the current **RHYT / OMEN** source tree: **bugfixes and polish** since Alpha 1.2.2. For per-commit detail, see the development repository history.
+
+---
+
 ## Alpha 1.2.2 — Omen chat scroll & last-score card (portable / GitHub, April 2026)
 
 ### Chat (thread view)

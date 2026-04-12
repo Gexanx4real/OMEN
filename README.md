@@ -8,6 +8,10 @@
 
 Full changelog: **[PATCH_NOTES_MARCH_2026.md](PATCH_NOTES_MARCH_2026.md)**
 
+### Alpha 1.2.3 — Latest portable build
+
+- Fresh **omen.exe** from current source: **fixes and polish** since 1.2.2. See **PATCH_NOTES** and your dev repo for specifics.
+
 ### Alpha 1.2.2 — Chat scroll & last-score card
 
 - **Chat (thread view):** Mouse wheel scrolls messages when the pointer is over the chat panel except the **text input** and **send** area; uses wheel **position** when available; maps horizontal wheel to vertical where needed; **Page Up / Page Down** for message scroll.
