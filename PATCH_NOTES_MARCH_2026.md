@@ -4,6 +4,12 @@
 
 ---
 
+## Alpha 1.3.3 — Portable build update (April 2026)
+
+Fresh **PyInstaller** build from current source: **bugfixes and polish** since Alpha 1.3.2. Details: development repository commit history.
+
+---
+
 ## Alpha 1.3.2 — Portable build update (April 2026)
 
 Fresh **PyInstaller** build from current source: **bugfixes and polish** since Alpha 1.3.1. Details: development repository commit history.
